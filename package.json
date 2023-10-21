@@ -11,6 +11,6 @@
   "dependencies": {
     "express": "^4.16.4",
     "inquire": "^0.4.8",
-    "uuid": "^8.3.2"
+    "uuidv4": "^6.2.13"
   }
 }

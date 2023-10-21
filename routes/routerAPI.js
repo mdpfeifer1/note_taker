@@ -1,10 +1,11 @@
 const routes = require('express').Router();
-const uuid = require('uuid');
+const uuidv4 = require('uuid');
 const { readAndAppend, readFromFile } = require('../helper/uuid');
+const db = require('../db/db.json');
 
 // GET Route for retrieving all the feedback
 routes.get('/notes', (req, res) =>
-  readFromFile('./db/feedback.json').then((data) => res.json(JSON.parse(data)))
+  readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 );
 
 // POST Route for submitting feedback
@@ -18,14 +19,14 @@ routes.post('/notes', (req, res) => {
     const notes = {
         title, 
         text,
-        id: uuid(),
+        id: uuidv4,
     };
 
     readAndAppend(notes, './db/db.json');
 
     const response = {
       status: 'success',
-      body: newFeedback,
+      body: notes,
     };
 
     res.json(response);
