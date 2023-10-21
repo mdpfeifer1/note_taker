@@ -1,13 +1,12 @@
 // On the back end, the application should include a `db.json` file that will be used to store 
 // and retrieve notes using the `fs` module.
-
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
 
 const app = express();
 
-const notes = require('./db/db.json')
+const note = require('./db/db.json')
 
 const PORT = process.env.PORT || 3001;
 
@@ -15,8 +14,15 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(express.static('public'));
 
-
 // * `GET /notes` should return the `notes.html` file.
+app.get('/api/notes', (req, res) => {
+    res.json()
+})
+
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
 
 // * `GET *` should return the `index.html` file.
 
