@@ -9,6 +9,7 @@
  
 ## GitHub 
  https://github.com/mdpfeifer1
+ https://github.com/mdpfeifer1/note_taker
 
 ## Table of Contents 
 
