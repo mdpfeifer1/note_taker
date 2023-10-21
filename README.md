@@ -11,6 +11,9 @@
  https://github.com/mdpfeifer1
  https://github.com/mdpfeifer1/note_taker
 
+## Heroku
+https://evening-temple-51457-4e68c2b99855.herokuapp.com/
+
 ## Table of Contents 
 
 - [Usage](#usage)
@@ -24,6 +27,8 @@
 ## Credits
  
 Jakob Pfeifer @https://github.com/jakobpfeifer135 
+
+Referenced portions of mini challenge, and other previous exercises
 
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
